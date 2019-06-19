@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementPlayer : MonoBehaviour
 {
     Rigidbody rb;
-    
+    public float speed = 3f;
     public GameObject bomb;
     private int maxBombs = 2;
     private int bombsOnField=0;
@@ -29,7 +29,7 @@ public class MovementPlayer : MonoBehaviour
 
     void Update()
     {
-        PlayerMovement();
+ //       PlayerMovement();
         PlaceBomb();
         CheckBomb();
         TurnOnCollider();
