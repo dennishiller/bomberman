@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementPlayer : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed = 2.0f;
+    
     public GameObject bomb;
     private int maxBombs = 2;
     private int bombsOnField=0;
