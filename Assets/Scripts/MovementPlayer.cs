@@ -30,7 +30,6 @@ public class MovementPlayer : MonoBehaviour
     void Update()
     {
 
-        PlayerMovement();
         PlaceBomb();
         CheckBomb();
         BombExploded();
@@ -38,31 +37,7 @@ public class MovementPlayer : MonoBehaviour
 
     }
 
-    void PlayerMovement()
-    {
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = transform.right * speed;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = -transform.right * speed;
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            rb.velocity = new Vector3(0, 0, 1) * speed;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            rb.velocity = new Vector3(0, 0, -1) * speed;
-        }
-        else
-        {
-            rb.velocity = new Vector3(0, 0, 0);
-        }
 
-        
-    }
 
     void PlaceBomb()
     {
