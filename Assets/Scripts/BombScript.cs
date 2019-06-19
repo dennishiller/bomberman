@@ -5,8 +5,9 @@ using UnityEngine;
 public class BombScript : MonoBehaviour
 {
     private float lifeTime = 3;
-    public GameObject player;
-    //new Collider collider;
+    //public GameObject player;
+    private MovementPlayer mp;
+    new Collider collider;
  
     //IEnumerator countdown()
     //{
@@ -18,14 +19,16 @@ public class BombScript : MonoBehaviour
     {
         //StartCoroutine(countdown());
         Destroy(gameObject, lifeTime);
-        //collider = GetComponent<Collider>();
-        //collider.enabled = false;
-        
+        collider = GetComponent<Collider>();
+        collider.enabled = false;
+        mp = FindObjectOfType<MovementPlayer>();
+
     }
 
     private void OnDestroy()
     {
-        //player.GetComponent<MovementPlayer>().bombExploded();
+        mp.BombExploded();
+        //player.GetComponent<MovementPlayer>().BombExploded();
         //Debug.Log("Destroy");
     }
 

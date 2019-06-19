@@ -12,7 +12,7 @@ public class MovementPlayer : MonoBehaviour
     private List<GameObject> bombList = new List<GameObject>();
     private float cooldownTime=1;
     private float nextBombTime=0;
-    private Collider collider;
+    private new Collider collider;
     private GridScript grid;
 
     private void Awake()
@@ -29,16 +29,14 @@ public class MovementPlayer : MonoBehaviour
 
     void Update()
     {
-
         PlayerMovement();
         PlaceBomb();
         CheckBomb();
-        BombExploded();
-        //TurnOnCollider();
+        TurnOnCollider();
 
     }
 
-    void PlayerMovement()
+    private void PlayerMovement()
     {
         if (Input.GetKey(KeyCode.D))
         {
@@ -64,7 +62,7 @@ public class MovementPlayer : MonoBehaviour
         
     }
 
-    void PlaceBomb()
+    private void PlaceBomb()
     {
         if (Input.GetKey(KeyCode.Space))
         {
@@ -73,26 +71,23 @@ public class MovementPlayer : MonoBehaviour
                 bombList.Add(Instantiate(bomb, grid.GetNearestPointOnGrid(transform.position) , Quaternion.identity));
                 nextBombTime = Time.time + cooldownTime;
                 bombsOnField++;
-                collider.enabled = false;
-                Debug.Log("Test");
             }
         }    
     }
 
     public void BombExploded()
     {
-        if (bombList[0]==null)
-        {
-            bombList.RemoveAt(0);
-            bombsOnField--;
-        }
+        Debug.Log("BOOM");
+        bombList.RemoveAt(0);
+        bombsOnField--;
+        
     }
 
     private void CheckBomb()
     {
         if (Input.GetKey(KeyCode.Q))
         {
-            Debug.Log(bombList.Count);
+            Debug.Log(bombList[bombsOnField - 1].transform.position);
         }
     }
 
@@ -105,22 +100,20 @@ public class MovementPlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PowerUp"))
         {
-            Debug.Log("TEST");
             other.gameObject.SetActive(false);
             this.IncreaseMaxBombs();
         }
     }
 
-    //private void TurnOnCollider()
-    //{
-    //    if (Vector3.Distance(bombList[bombsOnField].GetComponent<Transform>().position, transform.position) > 1)
-    //    {
-    //        Debug.Log("ENTFERNT");
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("NEIN");
-    //    }
-    //}
+    private void TurnOnCollider()
+    {
+        if (bombList.Count != 0)
+        {
+            if (Vector3.Distance(bombList[bombsOnField - 1].transform.position, transform.position) > 0.9)
+            {
+                bombList[bombsOnField - 1].GetComponent<Collider>().enabled = true;
+            }
+        }
+    }
 
 }
