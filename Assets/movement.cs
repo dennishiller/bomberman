@@ -10,9 +10,7 @@ public class movement : MonoBehaviour
     public float moveHorizontal;
     public float speed = 10;
     public float turnSpeed = 100;
-    public GameObject OriginPosition;
-    public GameObject Player;
-    public bool isFirstPerson;
+    public bool FirstPerson;
 
     public Camera globalCam;
     public Camera playerCam;
@@ -21,7 +19,7 @@ public class movement : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        isFirstPerson = true;
+        FirstPerson = false;
     }
 
 
@@ -35,20 +33,21 @@ public class movement : MonoBehaviour
             {
                 globalCam.gameObject.SetActive(false);
                 playerCam.gameObject.SetActive(true);
-                isFirstPerson = true;
+                FirstPerson = false;
 
             }
             else
             {
                 globalCam.gameObject.SetActive(true);
                 playerCam.gameObject.SetActive(false);
-                isFirstPerson = false;
+                FirstPerson = true;
             }
         }
         
         moveHorizontal = Input.GetAxis("Horizontal");
         moveVertical = Input.GetAxis("Vertical");
-        if (isFirstPerson)
+        
+        if (!FirstPerson)
         {
             if (moveVertical > 0)
             {
@@ -77,32 +76,19 @@ public class movement : MonoBehaviour
             if (moveHorizontal < 0)
             {
                 animator.SetBool("isRunning", true);
-                //transform.Translate(Vector3.left * Time.deltaTime *speed);
                 transform.Rotate(Vector3.down, turnSpeed * Time.deltaTime);
-
                 animator.SetFloat("starter", -moveHorizontal);
-                /* this.gameObject.transform.eulerAngles = new Vector3(
-                     this.gameObject.transform.eulerAngles.x,
-                     270,
-                     this.gameObject.transform.eulerAngles.z
-                 );*/
-                transform.Translate(Vector3.left * Time.deltaTime * speed);
+          
             }
             else if (moveHorizontal > 0)
             {
                 animator.SetBool("isRunning", true);
                 animator.SetFloat("starter", moveHorizontal);
                 transform.Rotate(Vector3.up, turnSpeed * Time.deltaTime);
-                /* this.gameObject.transform.eulerAngles = new Vector3(
-                     this.gameObject.transform.eulerAngles.x,
-                     90,
-                     this.gameObject.transform.eulerAngles.z
-                 );*/
-                
-                transform.Translate(-Vector3.left * Time.deltaTime * speed);
             }
 
         }
+        // Movement first Person
         else
         {
             if (moveVertical > 0)
@@ -121,9 +107,9 @@ public class movement : MonoBehaviour
                 animator.SetBool("isRunning", true);
                 animator.SetFloat("starter", -moveVertical);
                 this.gameObject.transform.eulerAngles = new Vector3(
-                      this.gameObject.transform.eulerAngles.x,
+                    this.gameObject.transform.eulerAngles.x,
                       180,
-                      this.gameObject.transform.eulerAngles.z
+                    this.gameObject.transform.eulerAngles.z
                   );
                 transform.Translate(Vector3.forward * Time.deltaTime * speed);
             }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementPlayer : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed = 2.0f;
+    
     public GameObject bomb;
     private int maxBombs = 2;
     private int bombsOnField=0;
@@ -29,7 +29,6 @@ public class MovementPlayer : MonoBehaviour
 
     void Update()
     {
-
         PlaceBomb();
         CheckBomb();
         BombExploded();
@@ -37,8 +36,7 @@ public class MovementPlayer : MonoBehaviour
 
     }
 
-
-
+  
     void PlaceBomb()
     {
         if (Input.GetKey(KeyCode.Space))
