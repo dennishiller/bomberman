@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementPlayer : MonoBehaviour
 {
     Rigidbody rb;
-    public float speed = 3f;
+    //public float speed = 3f;
     public GameObject bomb;
     private int maxBombs = 2;
     private int bombsOnField=0;
@@ -34,32 +34,6 @@ public class MovementPlayer : MonoBehaviour
         CheckBomb();
         TurnOnCollider();
 
-    }
-
-    private void PlayerMovement()
-    {
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = transform.right * speed;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = -transform.right * speed;
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            rb.velocity = new Vector3(0, 0, 1) * speed;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            rb.velocity = new Vector3(0, 0, -1) * speed;
-        }
-        else
-        {
-            rb.velocity = new Vector3(0, 0, 0);
-        }
-
-        
     }
 
     private void PlaceBomb()
