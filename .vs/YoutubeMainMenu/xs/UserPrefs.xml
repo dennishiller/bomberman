@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{C87F5850-B528-2835-C647-2404C1299BD5}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ButtonPanelScript.cs">
+    <Files>
+      <File FileName="Assets/ButtonPanelScript.cs" Line="17" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
