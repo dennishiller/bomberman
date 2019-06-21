@@ -29,9 +29,8 @@ public class MovementPlayer : MonoBehaviour
 
     void Update()
     {
- //       PlayerMovement();
+        //       PlayerMovement();
         PlaceBomb();
-        CheckBomb();
         TurnOnCollider();
 
     }
@@ -55,14 +54,6 @@ public class MovementPlayer : MonoBehaviour
         bombList.RemoveAt(0);
         bombsOnField--;
         
-    }
-
-    private void CheckBomb()
-    {
-        if (Input.GetKey(KeyCode.Q))
-        {
-            Debug.Log(bombList[bombsOnField - 1].transform.position);
-        }
     }
 
     public void IncreaseMaxBombs()
