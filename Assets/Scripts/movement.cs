@@ -8,7 +8,7 @@ public class movement : MonoBehaviour
     private Animator animator;
     public float moveVertical;
     public float moveHorizontal;
-    public float speed = 10;
+    public float speed = 0.5f;
     public float turnSpeed = 100;
     public bool FirstPerson;
 

@@ -18,7 +18,7 @@ public class GridScript : MonoBehaviour
 
         Vector3 result = new Vector3(
             (float)xCount * size,
-            (float)yCount * size,
+            (float)-10,
             (float)zCount * size);
 
         result += transform.position;

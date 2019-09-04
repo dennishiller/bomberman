@@ -62,14 +62,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\dontdestroy.cs" />
+    <Compile Include="Assets\Materials\DestroySelf.cs" />
     <Compile Include="Assets\Scripts\BombScript.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\ButtonPanelScript.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\GridScript.cs" />
+    <Compile Include="Assets\Scripts\Health.cs" />
     <Compile Include="Assets\Scripts\movement.cs" />
     <Compile Include="Assets\Scripts\MovementPlayer.cs" />
+    <Compile Include="Assets\Scripts\NetworkManager.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\PowerUpScript.cs" />
+    <Compile Include="Assets\Scripts\SpawnBlocks.cs" />
     <Compile Include="Assets\Scripts\SpawnDestroyableBlocks.cs" />
-    <Compile Include="Assets\Scripts\SpawnUnbreakable.cs" />
+    <Compile Include="Assets\Scripts\SpawnPoint.cs" />
     <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
     <Compile Include="Assets\SocketIO\JSONObject\JSONTemplates.cs" />
     <Compile Include="Assets\SocketIO\JSONObject\VectorTemplates.cs" />

@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovementPlayer : MonoBehaviour
 {
     Rigidbody rb;
-    //public float speed = 3f;
     public GameObject bomb;
     private int maxBombs = 2;
     private int bombsOnField=0;
@@ -14,10 +13,12 @@ public class MovementPlayer : MonoBehaviour
     private float nextBombTime=0;
     private new Collider collider;
     private GridScript grid;
+    private movement movementScript;
 
     private void Awake()
     {
         grid = FindObjectOfType<GridScript>();
+        movementScript = FindObjectOfType<movement>();
     }
 
     void Start()
@@ -29,7 +30,6 @@ public class MovementPlayer : MonoBehaviour
 
     void Update()
     {
-        //      PlayerMovement();
         PlaceBomb();
         TurnOnCollider();
 
@@ -41,7 +41,7 @@ public class MovementPlayer : MonoBehaviour
         {
             if (!(maxBombs == bombsOnField) && Time.time>nextBombTime)
             {
-                bombList.Add(Instantiate(bomb, grid.GetNearestPointOnGrid(transform.position) , Quaternion.identity));
+                bombList.Add(Instantiate(bomb, grid.GetNearestPointOnGrid(transform.position), Quaternion.identity));
                 nextBombTime = Time.time + cooldownTime;
                 bombsOnField++;
             }
@@ -52,8 +52,7 @@ public class MovementPlayer : MonoBehaviour
     {
         Debug.Log("BOOM");
         bombList.RemoveAt(0);
-        bombsOnField--;
-        
+        bombsOnField--;      
     }
 
     public void IncreaseMaxBombs()
@@ -65,8 +64,20 @@ public class MovementPlayer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("PowerUp"))
         {
-            other.gameObject.SetActive(false);
-            this.IncreaseMaxBombs();
+            if (other.gameObject.name == "SpeedPowerUp")
+            {
+                other.gameObject.SetActive(false);
+                movementScript.speed += 0.5f;
+                
+                Debug.Log(movementScript.speed);
+            }
+
+            if (other.gameObject.name == "MaxBombsPowerUp")
+            {
+                Debug.Log("if drinne bomb");
+                other.gameObject.SetActive(false);
+                this.IncreaseMaxBombs();
+            }
         }
     }
 
