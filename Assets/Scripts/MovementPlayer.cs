@@ -29,7 +29,7 @@ public class MovementPlayer : MonoBehaviour
 
     void Update()
     {
-        //       PlayerMovement();
+        //      PlayerMovement();
         PlaceBomb();
         TurnOnCollider();
 

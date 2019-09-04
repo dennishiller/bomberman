@@ -7,7 +7,7 @@ public class GridScript : MonoBehaviour
 
     [SerializeField]
     private float size = 1f;
-
+    
     public Vector3 GetNearestPointOnGrid(Vector3 position)
     {
         position -= transform.position;

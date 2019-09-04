@@ -3,7 +3,11 @@ guid: 8e324ddf21a3c1b4a87069ff75397e1b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - unbreakableWall: {fileID: 2037478878030279355, guid: c4f5c5c31f7263849871a7fa554e8cb0,
+      type: 3}
+  - breakableWall: {fileID: 985355294616355373, guid: 11427fe5dd7814d42aa8550906c08d6c,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
