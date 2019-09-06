@@ -35,6 +35,7 @@ public class MovementPlayer : MonoBehaviour
 
     }
 
+  
     private void PlaceBomb()
     {
         if (Input.GetKey(KeyCode.Space))

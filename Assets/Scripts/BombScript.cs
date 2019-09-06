@@ -9,6 +9,7 @@ public class BombScript : MonoBehaviour
     new Collider collider;
     public GameObject explosionPrefab;
     public LayerMask levelMask;
+    private bool isExploded = false;
 
 
     private void Start()
@@ -33,6 +34,7 @@ public class BombScript : MonoBehaviour
         StartCoroutine(CreateExplosions(Vector3.left));
 
         GetComponent<MeshRenderer>().enabled = false; //2
+        isExploded = true;
         explosionPrefab.GetComponent<Collider>().enabled = false;
         //transform.Find("Collider").gameObject.SetActive(false); //3
         Destroy(gameObject, .3f); //4
@@ -59,6 +61,10 @@ public class BombScript : MonoBehaviour
             }
             else
             { //7
+                if (hit.collider.tag.Equals("breakable"))
+                {
+                    Destroy(hit.collider.gameObject);
+                }
                 break;
             }
 
@@ -70,7 +76,12 @@ public class BombScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-
+        Debug.Log("Entered OnTrigger");
+        if (!isExploded && other.CompareTag("Explosion"))
+        { // 1 & 2  
+            CancelInvoke("Explode"); // 2
+            Explode(); // 3
+        }  
     }
 
 
