@@ -613,6 +613,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -633,10 +634,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: e2e89b54-dc20-4f92-bba0-8ee22b41d724
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: YoutubeMainMenu
+  organizationId: alisblue
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0

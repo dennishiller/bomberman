@@ -10,14 +10,16 @@ public class BombScript : MonoBehaviour
     public GameObject explosionPrefab;
     public LayerMask levelMask;
     private bool isExploded = false;
+    public GameObject bombPrefab;       //reingehauen
+    public int bombPower = 2;
 
 
     private void Start()
     {
-        collider = GetComponent<Collider>();
+        collider = bombPrefab.GetComponent<Collider>();     //verändert bissl
         collider.enabled = false;
         mp = FindObjectOfType<MovementPlayer>();
-        Invoke("Explode", 3f);
+        Invoke("Explode", lifeTime);
     }
 
     private void Update()
@@ -33,17 +35,18 @@ public class BombScript : MonoBehaviour
         StartCoroutine(CreateExplosions(Vector3.back));
         StartCoroutine(CreateExplosions(Vector3.left));
 
-        GetComponent<MeshRenderer>().enabled = false; //2
+        bombPrefab.GetComponent<MeshRenderer>().enabled = false; //2
         isExploded = true;
         explosionPrefab.GetComponent<Collider>().enabled = false;
         //transform.Find("Collider").gameObject.SetActive(false); //3
         Destroy(gameObject, .3f); //4
+        explosionPrefab.GetComponent<Collider>().enabled = true;        //WICHTIG
     }
 
     private IEnumerator CreateExplosions(Vector3 direction)
     {
         //1
-        for (int i = 1; i < 3; i++)
+        for (int i = 1; i < mp.bombPower; i++)
         {
             //2
             RaycastHit hit;
@@ -76,7 +79,6 @@ public class BombScript : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Entered OnTrigger");
         if (!isExploded && other.CompareTag("Explosion"))
         { // 1 & 2  
             CancelInvoke("Explode"); // 2
