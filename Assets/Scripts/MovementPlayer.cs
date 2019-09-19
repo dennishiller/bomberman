@@ -13,7 +13,12 @@ public class MovementPlayer : MonoBehaviour
     private float cooldownTime=0.5f;
     private float nextBombTime=0;
     private new Collider collider;
+
     private GridScript grid;
+
+    [Header("Test")]
+    public GameObject gridGO;
+
     private movement movementScript;
     public bool dead = false;       //reingehauen
     private int health = 3;         //reingehauen
@@ -26,11 +31,16 @@ public class MovementPlayer : MonoBehaviour
     private BombScript bombScript;
     public int bombPower = 2;
 
+
+
     private void Awake()
     {
-        grid = FindObjectOfType<GridScript>();
-        movementScript = FindObjectOfType<movement>();
-        bombScript = FindObjectOfType<BombScript>();
+        grid = gridGO.GetComponent<GridScript>();
+        movementScript = GetComponent<movement>();
+        //bombScript = FindObjectOfType<BombScript>();
+
+        // BombScript bombScript_placeholder = bombList[0].GetComponent<BombScript>();
+        // bombScript_placeholder.explode();
     }
 
     void Start()
@@ -58,7 +68,9 @@ public class MovementPlayer : MonoBehaviour
         {
             if (!(maxBombs == bombsOnField) && Time.time>nextBombTime)
             {
-                bombList.Add(Instantiate(bomb, grid.GetNearestPointOnGrid(transform.position), Quaternion.identity));
+                GameObject Bomb = Instantiate(bomb, grid.GetNearestPointOnGrid(transform.position), Quaternion.identity);
+                bombList.Add(Bomb);
+                Bomb.GetComponent<BombScript>().Instantiate(gameObject);
                 nextBombTime = Time.time + cooldownTime;
                 bombsOnField++;
             }

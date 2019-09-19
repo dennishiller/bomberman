@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb52eacaaabd8864d860f1c6019c1515, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
   explosionPrefab: {fileID: 177540, guid: 3301b2bc50869734994760a02f5b164b, type: 3}
   levelMask:
     serializedVersion: 2

@@ -6,6 +6,8 @@ public class BombScript : MonoBehaviour
 {
     private float lifeTime = 3;
     private MovementPlayer mp;
+    public GameObject Player;
+
     new Collider collider;
     public GameObject explosionPrefab;
     public LayerMask levelMask;
@@ -18,13 +20,18 @@ public class BombScript : MonoBehaviour
     {
         collider = bombPrefab.GetComponent<Collider>();     //verändert bissl
         collider.enabled = false;
-        mp = FindObjectOfType<MovementPlayer>();
+        mp = Player.GetComponent<MovementPlayer>();
         Invoke("Explode", lifeTime);
     }
 
     private void Update()
     {
  
+    }
+
+    public void Instantiate(GameObject gameObject)
+    {
+        Player = gameObject;
     }
 
     void Explode()
@@ -35,7 +42,10 @@ public class BombScript : MonoBehaviour
         StartCoroutine(CreateExplosions(Vector3.back));
         StartCoroutine(CreateExplosions(Vector3.left));
 
-        bombPrefab.GetComponent<MeshRenderer>().enabled = false; //2
+        GetComponent<MeshRenderer>().enabled = false; //2
+        Renderer[] render = GetComponentsInChildren<Renderer>();
+        foreach (Renderer r in render)
+           r.enabled = false;
         isExploded = true;
         explosionPrefab.GetComponent<Collider>().enabled = false;
         //transform.Find("Collider").gameObject.SetActive(false); //3
