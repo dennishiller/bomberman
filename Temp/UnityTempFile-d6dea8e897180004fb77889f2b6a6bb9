@@ -1,6 +1,6 @@
 /target:library
 /nowarn:0169
-/out:Temp/Unity.TextMeshPro.dll
+/out:Temp/Unity.Analytics.DataPrivacy.dll
 /debug:portable
 /optimize-
 /nostdlib+
@@ -76,6 +76,7 @@
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll"
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
 /reference:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
+/reference:Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll
@@ -83,7 +84,6 @@
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll
-/reference:Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -302,59 +302,6 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\AssemblyInfo.cs.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\FastAction.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\MaterialReferenceManager.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextContainer.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextMeshPro.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TextMeshProUGUI.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Asset.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Character.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_CharacterInfo.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ColorGradient.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_CoroutineTween.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_DefaultControls.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Dropdown.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_EditorResourceManager.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAsset.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAssetCommon.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontAssetUtilities.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontFeaturesCommon.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_FontFeatureTable.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_InputField.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_InputValidator.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_LineInfo.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ListPool.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_MaterialManager.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_MeshInfo.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ObjectPool.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_PackageResourceImporter.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_RichTextTagsCommon.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_RichTextTagStack.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ScrollbarEventHandler.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SelectionCaret.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Settings.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_ShaderUtilities.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Sprite.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAnimator.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAsset.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteAssetImportFormats.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteCharacter.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SpriteGlyph.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Style.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_StyleSheet.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SubMesh.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_SubMeshUI.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_Text.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextElement.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextElement_Legacy.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextInfo.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextParsingUtilities.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_TextUtilities.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_UpdateManager.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMP_UpdateRegistery.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_EventManager.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_ExtensionMethods.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_MeshUtilities.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_Private.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.textmeshpro@2.0.1\Scripts\Runtime\TMPro_UGUI_Private.cs
+D:\GitHub\bomberman\Library\PackageCache\com.unity.analytics@3.3.2\DataPrivacy\AssemblyInfo.cs
+D:\GitHub\bomberman\Library\PackageCache\com.unity.analytics@3.3.2\DataPrivacy\DataPrivacy.cs
+D:\GitHub\bomberman\Library\PackageCache\com.unity.analytics@3.3.2\DataPrivacy\DataPrivacyButton.cs

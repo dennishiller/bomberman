@@ -1,6 +1,6 @@
 /target:library
 /nowarn:0169
-/out:Temp/Unity.CollabProxy.Editor.dll
+/out:Temp/Unity.PackageManagerUI.Editor.dll
 /debug:portable
 /optimize-
 /nostdlib+
@@ -76,12 +76,14 @@
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll"
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll"
 /reference:"C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
+/reference:Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
+/reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll
+/reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.purchasing@2.0.6/UnityEngine.Purchasing.dll
 /reference:D:/GitHub/bomberman/Library/PackageCache/com.unity.purchasing@2.0.6/Editor/UnityEditor.Purchasing.dll
-/reference:Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll"
 /reference:"D:/Unity Versions/2019.1.4f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll"
@@ -303,20 +305,73 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\AssemblyInfo.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Bootstrap.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabAnalytics.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabHistoryWindow.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabToolbarButton.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\CollabToolbarWindow.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Presenters\CollabHistoryPresenter.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\BuildStatusButton.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryDropDown.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryDropDownItem.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryItem.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryItemFactory.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\CollabHistoryRevisionLine.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\HistoryProgressSpinner.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\ICollabHistoryItemFactory.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\PagedListView.cs
-D:\GitHub\bomberman\Library\PackageCache\com.unity.collab-proxy@1.2.16\Editor\Collab\Views\StatusView.cs
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\AssemblyInfo.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\External\SemVersion.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\External\SemVersionExtension.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\ApplicationUtil.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\ItemState.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\OperationSignal.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\Resources.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\Selection.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\ThreadedDelay.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\VisualElementCache.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Common\VisualElementExtensions.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IAddOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IBaseOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IListOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IOperationFactory.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IPackageSelection.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\IRemoveOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Interfaces\ISearchOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\OperationFactory.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\Package.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageAssetPostprocessor.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageCollection.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageError.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageFilter.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageGroupOrigins.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageInfo.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageInfoListExtensions.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageJsonHelper.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageListExtensions.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageOrigin.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageSample.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageSearchFilter.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageState.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageTag.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageType.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Packages\PackageVersion.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmAddOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmBaseOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmListOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmOperationFactory.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmRemoveOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\Services\Upm\UpmSearchOperation.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\Alert.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\Arrow.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\ArrowToggle.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\ElementSelection.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\IOUtils.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\LoadingSpinner.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\SelectionManager.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\UIUtils.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Common\VersionItem.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\Interfaces\IPackageManagerExtension.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageAddFromIdField.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageAddFromUrlField.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageDependencies.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageDetails.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageFiltering.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageGroup.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageItem.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageList.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageManagerExtensions.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageManagerPrefs.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageManagerToolbar.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageManagerWindow.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageSampleItem.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageSampleList.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageSearchToolbar.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageStatusBar.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageToolBar.cs"
+"D:\Unity Versions\2019.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.package-manager-ui\Editor\Sources\UI\PackageVersionLabel.cs"
